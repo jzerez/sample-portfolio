@@ -2421,6 +2421,7 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
+
 	}
 
 		.image img {
@@ -2466,6 +2467,23 @@
 
 			.image.main img {
 				width: 100%;
+			}
+
+		.image.smol {
+			display: inline-block;
+
+			padding: 0.65em;
+			border-radius: 100%;
+			border: solid 1px;
+			text-align: center;
+		}
+
+			.image.smol img {
+				display: block;
+				border-radius: 100%;
+				width: 10em;
+				height: 10em;
+				text-align: center;
 			}
 
 /* List */

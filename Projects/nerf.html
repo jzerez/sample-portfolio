@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nerf Tracker - Jonathan's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Nerf Dart Tracker</h1>
+						<p>Using computer vision libraries in python, the aim of this project is to be able to film a nerf dart in flight, in order to get really awesome and over dramatic movie shots. It is still a work in progress</p>
+						<a href="../index.html" class="button">Return to Home</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/nerf.PNG" alt="" /></span>
+								<h2>Background</h2>
+								<p>Have you ever been watching a movie where the bad guy shoots a bullet, slow motion is engaged, and the camera pans perfectly to keep the bullet in frame, adding to the drama when the good guy dodges the bullet just in the knick of time? I wanted to make something that could do that, so I decided to start working on the Nerf Dart Tracker, which would do the same thing, but for a Nerf dart, and not an actual bullet. This is my first project that utilizes computer vision and extensive PID controls. It is programmed in python, and uses OpenCV, a free computer vision library, to process the frames from the camera.</p>
+								<h2>Software</h2>
+								<p>The software behind this project is arguably the most interesting part. Using python and OpenCV, and a <em>lot</em> of googling and troubleshooting, I made a python script that can track an object and its trajectory over time. The script takes raw frames from the camera, applies a gaussian blur to the incomming frame, filters it out for a specific range of colors in the HSV colorspace, cleans the resulting image with opening and closing morphology operations, and then detects and records contours and their locations. A bounding box is drawn over the largest contour, and the center of said box is generated. This coordinate represents the position of the nerf dart in two dimensional space. This coordinate will be is published to the serial port of an arduino. The arduino, in turn, will use a PID control algorithm to control servos that can pan and tilt the camera as to keep the nerf dart in the center of the frame. </p>
+								<h2>Hardware</h2>
+								<p>Insert stuff here about the hardware</p>
+								<h2>Performance</h2>
+								<p>This project was pretty successful. Both triggers were able to go off at the right times pretty reliably. And while there was some rotation of the big hopper while in the air, it wasn't enough to completely throw off the trajectory of the small hopper. I believe that there are two places that the hopper could be improved. Firstly, the smaller hopper could have been more securely fastened to the big hopper to more efficiently convert the stored potential energy from the latex to height. Secondly, I could have made both hoppers jump higher, or at least for longer, in order to accentuate the double jump. Slow motion footage is needed to really appreciate the hopper's double jump. </p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<ul class="actions">
+								<li><a href="../index.html" class="button">Return to Home</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Jonathan Zerez</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>1000 Olin Way &bull; Needham, MA 02492 &bull; MB488 &bull; USA</dd>
+								<dt>Phone</dt>
+								<dd>(808) 321-2973</dd>
+								<dt>Email</dt>
+								<dd><a href="#">Jonathan.Zerez@Students.olin.edu</a></dd>
+							</dl>
+
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

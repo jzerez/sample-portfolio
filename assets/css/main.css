@@ -2460,6 +2460,7 @@
 			}
 
 		.image.main {
+
 			display: block;
 			margin: 0 0 3em 0;
 			width: 100%;
@@ -2468,7 +2469,28 @@
 			.image.main img {
 				width: 100%;
 			}
+		.image.gallery {
+			display: block;
+			margin: auto auto 3em auto;
+			width: 30em;
 
+		}
+			.image.gallery img {
+				display: block;
+				margin: auto auto 3em auto;
+				width: 30em;
+			}
+		.image.rows {
+			display: block;
+			margin: auto auto 3em auto;
+			padding: inherit;
+			height: 20em;
+		}
+			.image.rows  img{
+				display: block;
+				margin: auto auto 3em auto;
+				height: 18em;
+			}
 		.image.smol {
 			display: inline-block;
 

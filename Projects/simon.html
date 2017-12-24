@@ -34,13 +34,13 @@
 								<span class="image main"><img src="images/Hopper1_crop.jpg" alt="" /></span>
 								<h2>Background</h2>
 								<p>This project was done with the Interactive Robotics Laboratory (IRL) at Olin's Robotics Lab. It is a research group led by students to do reasearch on robot-human interactions. In this project I worked with a group of three other students to make a 6-axis robotic arm to play simon says using python and the Robot Operating System (ROS).</p>
-								<p>The robot starts by generating a random sequence of 30 colors. It then attempts to press the first color in the sequence. It uses OpenCV, a python computer vision library, to detect the relative location of the desired button. It computes coordinates from the camera to coordinates for each joint of the robot, and pushes the button. It then goes to a home position and watches the user press the buttons. It can detect button pushes by the user by looking for flashes of colored LEDs. It compares the user's input to the correct sequence, and decides wheter to continue the game (adding one to the demonstrated colors of the sequence), or to end it.
+								<p>The robot starts by generating a random sequence of 30 colors. It then presses the first color in the sequence. It uses OpenCV, a python computer vision library, to detect the relative location of the desired button. It computes coordinates from the camera to coordinates for each joint of the robot, and pushes the button. It then goes to a home position and watches the user press the buttons. It can detect button pushes by the user by looking for flashes of colored LEDs. It compares the user's input to the correct sequence, and decides wheter to continue the game (adding one to the demonstrated colors of the sequence), or to end it.
 								</p>
 
 								<h2>Software</h2>
-								<p>Like stated earlier, the computer vision for this project was done using OpenCV. We used differnt functions in order to detect objects based on color and contours. Coordinate values and other important pieces of information was passed from script to script using ROS topics and nodes. </p>
+								<p>Like stated earlier, the computer vision for this project was done using OpenCV. We used different functions in order to detect objects based on color and contours. Coordinate values and other important pieces of information was passed from script to script using ROS topics and nodes. Actuation was handled by a custom suite developed in the Olin Robotics Lab</p>
 								<h2>Performance</h2>
-								<p>This is still a work in progress. Final results to come!</p>
+								<p>Due to rather strict time limitations, we were not able to create a fully functional program as defined by our initial mission statement. Rather than dynamically react to the position of the buttons, we had to fasten each button to a known and fixed location relative to the robotic arm. Additionally, because a lot of the computer vision dealt with color detection and filtration, we got somewhat inconsistent results in low ambient light enviornments. That being said, it was a quite good introductory experience to programming, working with ROS, and integrating with a robotic arm. Hopefully more cool programming projects with the 6 axis robotic arms will be featured in the future.</p>
 							</section>
 
 					</div>

@@ -22,8 +22,9 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Simon Says</h1>
-						<p>Using computer vision and an arduino, we're trying to make a 6 axis robot arm play simon says with the user. The robot can locate up to four colored buttons, generate a sequence to push them in, and record the user's attempts, turn by turn. It is still a work in progress.</p>
+						<p>Using computer vision and an arduino, we're trying to make a 6 axis robot arm play simon says with the user. The robot can locate up to four colored buttons, generate a sequence to push them in, and record the user's attempts, turn by turn.</p>
 						<a href="../index.html" class="button">Return to Home</a>
+						<a href="../all-projects.html" class="button">All Projects</a>
 					</header>
 
 				<!-- Main -->
@@ -31,7 +32,6 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/Hopper1_crop.jpg" alt="" /></span>
 								<h2>Background</h2>
 								<p>This project was done with the Interactive Robotics Laboratory (IRL) at Olin's Robotics Lab. It is a research group led by students to do reasearch on robot-human interactions. In this project I worked with a group of three other students to make a 6-axis robotic arm to play simon says using python and the Robot Operating System (ROS).</p>
 								<p>The robot starts by generating a random sequence of 30 colors. It then presses the first color in the sequence. It uses OpenCV, a python computer vision library, to detect the relative location of the desired button. It computes coordinates from the camera to coordinates for each joint of the robot, and pushes the button. It then goes to a home position and watches the user press the buttons. It can detect button pushes by the user by looking for flashes of colored LEDs. It compares the user's input to the correct sequence, and decides wheter to continue the game (adding one to the demonstrated colors of the sequence), or to end it.

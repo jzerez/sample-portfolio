@@ -24,6 +24,7 @@
 						<h1>NewsBlind</h1>
 						<p>Made for a hackathon, this project is a webapp that tries to determine if an article contains fake news or not</p>
 						<a href="../index.html" class="button">Return to Home</a>
+						<a href="../all-projects.html" class="button">All Projects</a>
 					</header>
 
 				<!-- Main -->
@@ -31,11 +32,16 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/newsblind.png" alt="" /></span>
+								<h2>About NewsBlind</h2>
+								<p>
+									NewsBlind is a team of engineers from Olin College of Engineering. Our product is a web app that takes URLs inputted by the user and determines whether the article in question contains false, biased, and/or questionable information.
+
+									We recognized that our interconnectedness on the web and the lightning speed at which data is shared creates an environment that makes it very easy for falsehoods and misinformation to spread. Easy access to accurate information on the internet is crucial to the continued success of advancing technology and society. While it is of the utmost importance to minimize the pertinence of fake news, we firmly believe that outright censorship of information is wrong. Our product is aimed at informing viewers about the accuracy of the media they consume, but ultimately leaves the decision up to them whether they wish to view and/or share the article or not.
+								</p>
 								<h2>Design Philosophy</h2>
-								<p>NewsBlind is a webapp that is supposed to empower users by presenting them with relevant information about an article before they actually read it. Our webapp does not censoring specific articles, rather it helpings the user to determine the level of skepticism they should have when approaching an article. The desicion to read and believe an article is still made by the user. In addition to this, we took many steps to ensure our webapp would not be polarizing, as fake news can often be. We are very transparent with the factors that go into the final rating of an article, and we output a confidence spectrum rather than a binary "fake or real", which helps to inform the user without comming across as accusatory or hostile, increasing the probability the user will take the advice of the webapp seriously.</p>
+								<p>NewsBlind is a webapp that is supposed to empower users by presenting them with relevant information about an article before they actually read it. Our webapp does not censor specific articles, rather it helpings the user to determine the level of skepticism they should have when approaching an article. The desicion to read and believe an article is still made by the user. In addition to this, we took many steps to ensure our webapp would not be polarizing, as fake news can often be. We are very transparent with the factors that go into the final rating of an article, and we output a confidence spectrum rather than a binary "fake or real", which helps to inform the user without comming across as accusatory or hostile, increasing the probability the user will take the advice of the webapp.</p>
 								<h2>How it Works</h2>
-                <p>Newsblind features quite a few neat features. It includes:</p>
+                <p>Newsblind has quite a few neat features. It includes:</p>
                 <ul>
                   <li>A machine learning algorithm to initially determine a guess for an article's legitimacy</li>
                   <li>A filter that checks the domain of the inputted article's URL against a known list of fake, or questionable domains</li>
@@ -46,7 +52,10 @@
                   <li>A web-crawler that can collect the newest articles across the web to make an adaptive training set for the initial machine learning algorithm</li>
                   <li>An algorithm that selectively weights the scores of each factor tested to create a final confidence level</li>
                 </ul>
-
+								<h2>Next Steps</h2>
+								<p> Currently, NewsBlind is only availible to those who have the source code. We are currently working on porting the webapp to a chrome extension or a more permanent and public website such that anyone will be able to use our program. In addition, there are a few more features that we would like to add. Firstly, we would like to analyze the author of the article in question and if possible, present some background information about the author to the user. In addition, we are working to implement a crowdsourced polling feature that will allow users to vote on whether they agree or not with the output of the program. This would not impact the output of the program, but would allow users to compare their opinions to the opinions of others, which can be quite powerful and persuasive.</p>
+								<h2>Learn More</h2>
+								<p> You can learn more about this project by visiting our <a href="https://devpost.com/software/goons_getem_gotem_good">DevPost</a> or our <a href="https://github.com/anushadatar/goons_getem_gotem_good">GitHub</a>
 							</section>
 
 					</div>
